@@ -43,3 +43,6 @@ export type { AvatarProps, AvatarGroupProps } from './Avatar'
 
 export { Skeleton, SkeletonCard, SkeletonList, SkeletonText } from './Skeleton'
 export type { SkeletonProps, SkeletonCardProps, SkeletonListProps, SkeletonTextProps } from './Skeleton'
+
+// Branding
+export { Logo, LogoMark } from './Logo'

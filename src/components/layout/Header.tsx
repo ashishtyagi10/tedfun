@@ -3,8 +3,9 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useAuthContext } from '@/providers/AuthProvider'
-import { Menu, X, Heart } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Logo } from '@/components/ui/Logo'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -23,10 +24,10 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 text-primary-700 hover:text-primary-800 transition-colors"
+            className="flex items-center gap-2.5 text-primary-700 hover:text-primary-800 transition-colors"
             aria-label="The Education Foundation Home"
           >
-            <Heart className="w-7 h-7 md:w-8 md:h-8 fill-current" />
+            <Logo size="md" className="md:w-9 md:h-9" />
             <span className="font-bold text-lg md:text-xl tracking-tight">
               The Education Foundation
             </span>

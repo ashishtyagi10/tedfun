@@ -1,0 +1,10 @@
+<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="96" fill="#1A5F7A"/>
+  <!-- Graduation cap - main symbol -->
+  <path d="M256 96L64 192L256 288L448 192L256 96Z" fill="white"/>
+  <!-- Rising vertical line - growth/aspiration -->
+  <path d="M256 288V384" stroke="white" stroke-width="32" stroke-linecap="round"/>
+  <!-- Circle at bottom - the student -->
+  <circle cx="256" cy="416" r="32" fill="white"/>
+</svg>

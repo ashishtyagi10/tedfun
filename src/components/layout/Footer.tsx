@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Heart, Mail, MapPin, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Mail, MapPin, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { Logo } from '@/components/ui/Logo'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -42,9 +43,9 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 transition-colors mb-4"
+              className="inline-flex items-center gap-2.5 text-primary-700 hover:text-primary-800 transition-colors mb-4"
             >
-              <Heart className="w-7 h-7 fill-current" />
+              <Logo size="md" />
               <span className="font-bold text-lg tracking-tight">The Education Foundation</span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
