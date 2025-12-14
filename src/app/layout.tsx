@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://theeducationfoundation.org',
+    url: 'https://tedfun.org',
     title: 'The Education Foundation - Empowering Students Through Community Support',
     description:
       'Connect with students in need and make a lasting impact through education funding.',

@@ -57,10 +57,10 @@ export function Footer() {
               <div className="flex items-start gap-3 text-sm text-gray-600">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:hello@theeducationfoundation.org"
+                  href="mailto:hello@tedfun.org"
                   className="hover:text-primary-700 transition-colors"
                 >
-                  hello@theeducationfoundation.org
+                  hello@tedfun.org
                 </a>
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-600">
