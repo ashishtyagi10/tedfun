@@ -1,8 +1,112 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if false;
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/donors/$(request.auth.uid)).data.role in ['admin', 'super_admin'];
+    }
+
+    function isSuperAdmin() {
+      return isAuthenticated() &&
+        get(/databases/$(database)/documents/donors/$(request.auth.uid)).data.role == 'super_admin';
+    }
+
+    // Students collection
+    match /students/{studentId} {
+      // Anyone can read approved students
+      allow read: if resource.data.status == 'approved';
+
+      // Admins can read all students
+      allow read: if isAdmin();
+
+      // Anyone can create a submission (status must be pending)
+      allow create: if request.resource.data.status == 'pending';
+
+      // Only admins can update
+      allow update: if isAdmin();
+
+      // Only super admins can delete
+      allow delete: if isSuperAdmin();
+
+      // Student needs sub-collection
+      match /needs/{needId} {
+        allow read: if get(/databases/$(database)/documents/students/$(studentId)).data.status == 'approved' || isAdmin();
+        allow write: if isAdmin();
+      }
+
+      // Impact updates sub-collection
+      match /updates/{updateId} {
+        allow read: if resource.data.isPublic == true || isAdmin();
+        allow write: if isAdmin();
+      }
+    }
+
+    // Donors collection
+    match /donors/{donorId} {
+      // Donors can read their own profile
+      allow read: if isOwner(donorId);
+
+      // Admins can read all donors
+      allow read: if isAdmin();
+
+      // Users can create their own profile on first login
+      allow create: if isOwner(donorId) && request.resource.data.role == 'donor';
+
+      // Users can update their own profile (but not role)
+      allow update: if isOwner(donorId) && request.resource.data.role == resource.data.role;
+
+      // Super admins can change roles
+      allow update: if isSuperAdmin();
+      allow delete: if isSuperAdmin();
+    }
+
+    // Donations collection
+    match /donations/{donationId} {
+      // Donors can read their own donations
+      allow read: if isAuthenticated() && resource.data.donorId == request.auth.uid;
+
+      // Admins can read all donations
+      allow read: if isAdmin();
+
+      // Admins can create (for offline donations)
+      allow create: if isAdmin();
+
+      // Only admins can update
+      allow update: if isAdmin();
+
+      // No one can delete donations
+      allow delete: if false;
+    }
+
+    // Campaigns collection
+    match /campaigns/{campaignId} {
+      // Anyone can read active campaigns
+      allow read: if resource.data.isActive == true;
+
+      // Admins can read all campaigns
+      allow read: if isAdmin();
+
+      // Only admins can create/update
+      allow create, update: if isAdmin();
+
+      // Only super admins can delete
+      allow delete: if isSuperAdmin();
+    }
+
+    // Global stats document
+    match /stats/{statId} {
+      allow read: if true;
+      allow write: if false; // Only Cloud Functions can update
     }
   }
 }
