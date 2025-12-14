@@ -11,11 +11,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'TedFun - Empowering Students Through Community Support',
-    template: '%s | TedFun',
+    default: 'The Education Foundation - Empowering Students Through Community Support',
+    template: '%s | The Education Foundation',
   },
   description:
-    'TedFun is a non-profit platform connecting donors with students in need. Help fund education, books, uniforms, and essential supplies for deserving students.',
+    'The Education Foundation is a non-profit platform connecting donors with students in need. Help fund education, books, uniforms, and essential supplies for deserving students.',
   keywords: [
     'education',
     'non-profit',
@@ -25,20 +25,20 @@ export const metadata: Metadata = {
     'community',
     'charity',
   ],
-  authors: [{ name: 'TedFun' }],
-  creator: 'TedFun',
+  authors: [{ name: 'The Education Foundation' }],
+  creator: 'The Education Foundation',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://tedfun.org',
-    title: 'TedFun - Empowering Students Through Community Support',
+    url: 'https://theeducationfoundation.org',
+    title: 'The Education Foundation - Empowering Students Through Community Support',
     description:
       'Connect with students in need and make a lasting impact through education funding.',
-    siteName: 'TedFun',
+    siteName: 'The Education Foundation',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TedFun - Empowering Students Through Community Support',
+    title: 'The Education Foundation - Empowering Students Through Community Support',
     description:
       'Connect with students in need and make a lasting impact through education funding.',
   },

@@ -41,7 +41,7 @@ export default function SignInPage() {
         <div className="bg-white rounded-2xl shadow-elevation-3 p-8">
           <div className="text-center mb-8">
             <Link href="/" className="inline-block">
-              <h1 className="text-2xl font-bold text-primary-700">TedFun</h1>
+              <h1 className="text-xl font-bold text-primary-700">The Education Foundation</h1>
             </Link>
             <p className="mt-2 text-gray-600">Welcome back</p>
           </div>

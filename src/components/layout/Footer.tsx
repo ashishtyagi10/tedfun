@@ -45,7 +45,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 transition-colors mb-4"
             >
               <Heart className="w-7 h-7 fill-current" />
-              <span className="font-bold text-xl tracking-tight">TedFun</span>
+              <span className="font-bold text-lg tracking-tight">The Education Foundation</span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed mb-6 max-w-sm">
               Empowering students through community support. Every donation
@@ -57,10 +57,10 @@ export function Footer() {
               <div className="flex items-start gap-3 text-sm text-gray-600">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:hello@tedfun.org"
+                  href="mailto:hello@theeducationfoundation.org"
                   className="hover:text-primary-700 transition-colors"
                 >
-                  hello@tedfun.org
+                  hello@theeducationfoundation.org
                 </a>
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-600">
@@ -127,7 +127,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             {/* Copyright */}
             <p className="text-sm text-gray-600">
-              &copy; {currentYear} TedFun. All rights reserved.
+              &copy; {currentYear} The Education Foundation. All rights reserved.
             </p>
 
             {/* Social Links */}

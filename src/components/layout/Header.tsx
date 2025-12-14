@@ -24,11 +24,11 @@ export function Header() {
           <Link
             href="/"
             className="flex items-center gap-2 text-primary-700 hover:text-primary-800 transition-colors"
-            aria-label="TedFun Home"
+            aria-label="The Education Foundation Home"
           >
             <Heart className="w-7 h-7 md:w-8 md:h-8 fill-current" />
-            <span className="font-bold text-xl md:text-2xl tracking-tight">
-              TedFun
+            <span className="font-bold text-lg md:text-xl tracking-tight">
+              The Education Foundation
             </span>
           </Link>
 
