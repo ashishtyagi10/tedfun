@@ -7,13 +7,14 @@
     "indexes": "tedfunstore.indexes.json"
   },
   "functions": {
+    "source": "functions",
     "predeploy": [
       "npm --prefix \"$RESOURCE_DIR\" run lint",
       "npm --prefix \"$RESOURCE_DIR\" run build"
     ]
   },
   "hosting": {
-    "public": "public",
+    "public": "out",
     "ignore": [
       "firebase.json",
       "**/.*",
