@@ -2,17 +2,31 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useAuthContext } from '@/providers/AuthProvider'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, LogOut } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Logo } from '@/components/ui/Logo'
+import { signOut } from '@/lib/firebase/auth'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { isAuthenticated } = useAuthContext()
+  const router = useRouter()
+
+  const handleSignOut = async () => {
+    try {
+      await signOut()
+      setMobileMenuOpen(false)
+      router.push('/')
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
+  }
 
   const navigation = [
     { name: 'Students', href: '/students' },
+    { name: 'Success Stories', href: '/stories' },
     { name: 'How It Works', href: '/how-it-works' },
     { name: 'About', href: '/about' },
   ]
@@ -50,9 +64,18 @@ export function Header() {
             {/* Auth CTA */}
             <div className="flex items-center gap-3">
               {isAuthenticated ? (
-                <Link href="/dashboard" className="btn-primary text-sm">
-                  Dashboard
-                </Link>
+                <>
+                  <Link href="/dashboard" className="btn-primary text-sm">
+                    Dashboard
+                  </Link>
+                  <button
+                    onClick={handleSignOut}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-red-600 transition-colors"
+                  >
+                    <LogOut className="w-4 h-4" />
+                    Sign Out
+                  </button>
+                </>
               ) : (
                 <>
                   <Link
@@ -102,13 +125,22 @@ export function Header() {
 
               <div className="border-t border-gray-100 pt-4 mt-2 flex flex-col gap-3">
                 {isAuthenticated ? (
-                  <Link
-                    href="/dashboard"
-                    className="btn-primary text-sm text-center"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Dashboard
-                  </Link>
+                  <>
+                    <Link
+                      href="/dashboard"
+                      className="btn-primary text-sm text-center"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={handleSignOut}
+                      className="inline-flex items-center justify-center gap-1.5 text-sm font-medium text-gray-600 hover:text-red-600 transition-colors py-2"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      Sign Out
+                    </button>
+                  </>
                 ) : (
                   <>
                     <Link
