@@ -203,11 +203,13 @@ export default function DonorAgreementPage() {
                         donor dashboard.
                       </p>
 
-                      <h3>2.3 Student-Specific Donations</h3>
+                      <h3>2.3 Student-Preferred Donations</h3>
                       <p>
-                        Contributions directed to a specific student's educational needs. These donations are
-                        used exclusively for the designated student's tuition fees, books, supplies, or other
-                        educational expenses.
+                        Contributions made with a preference for a specific student's educational needs.
+                        Your student selection expresses a preference, not a binding restriction — the
+                        Foundation retains final discretion over allocation (see Section 3.3). Preferred
+                        contributions are applied toward the student's tuition fees, books, supplies, or
+                        other educational expenses.
                       </p>
 
                       <h3>2.4 General Fund Donations</h3>
@@ -264,11 +266,11 @@ export default function DonorAgreementPage() {
                         </div>
                       </div>
 
-                      <h3>3.1 Student-Specific Allocation</h3>
+                      <h3>3.1 Student-Preferred Allocation</h3>
                       <p>
-                        When you donate to a specific student, 100% of your designated contribution goes
-                        directly to that student's educational expenses. Administrative costs are covered
-                        by our general fund.
+                        When you donate with a preference for a specific student, 100% of your
+                        contribution is applied to direct student educational expenses, in line with your
+                        preference wherever possible. Administrative costs are covered by our general fund.
                       </p>
 
                       <h3>3.2 Surplus Funds</h3>
@@ -277,6 +279,28 @@ export default function DonorAgreementPage() {
                         surplus may be used for their future educational needs or, with appropriate notice
                         to donors, redirected to students with similar needs.
                       </p>
+
+                      <h3>3.3 Donor Preferences and Foundation Discretion</h3>
+                      <p>
+                        All donations are contributions to The Education Foundation and become the
+                        property of the Foundation upon receipt. When you select a student or program,
+                        you are expressing a preference, not imposing a restriction. The Foundation
+                        retains exclusive legal control and discretion over the use of all donated funds,
+                        and its Board (or designated committee) makes final allocation decisions using
+                        objective, need-based criteria. If a preferred student withdraws, is fully funded,
+                        or otherwise cannot receive funds, the Foundation will apply your gift to another
+                        student or program with similar charitable purposes.
+                      </p>
+                      <div className="bg-primary-50 border border-primary-100 rounded-xl p-6 mt-6">
+                        <h4 className="font-semibold text-primary-900 mb-2">Why this matters</h4>
+                        <p className="text-primary-800 mb-0">
+                          This discretion is required for donations to qualify as tax-deductible
+                          charitable contributions under U.S. Internal Revenue Code Section 170.
+                          Gifts earmarked for a designated individual are treated as personal gifts,
+                          not charitable donations — retaining Foundation discretion protects both
+                          your tax deduction and our exempt status.
+                        </p>
+                      </div>
                     </div>
                   </section>
 
@@ -598,7 +622,9 @@ export default function DonorAgreementPage() {
                         By making a donation to The Education Foundation, you acknowledge that you have
                         read, understood, and agree to the terms of this Donor Agreement. You confirm that
                         your donation is made voluntarily and without expectation of goods or services in
-                        return (beyond those outlined in this agreement).
+                        return (beyond those outlined in this agreement). You further acknowledge that any
+                        student selection is an expression of preference and that the Foundation retains
+                        full discretion and control over all donated funds, as described in Section 3.3.
                       </p>
                       <div className="flex flex-wrap gap-4">
                         <Link

@@ -279,6 +279,20 @@ export function DonationFlow({ student, onSuccess, onCancel }: DonationFlowProps
               </p>
             </div>
 
+            {/* Donor discretion disclosure */}
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-gray-700">
+              <p className="font-medium text-gray-900 mb-1">How your donation works</p>
+              <p>
+                Your donation is a gift to The Education Foundation, a nonprofit
+                organization. By selecting {student.firstName}, you&apos;re expressing a
+                preference for how your gift is used. To keep your donation
+                tax-deductible under IRS rules, the Foundation retains full discretion
+                and control over all donated funds — if {student.firstName}&apos;s needs
+                are already fully met, your gift will support another student with
+                similar needs.
+              </p>
+            </div>
+
             {/* Summary */}
             <div className="bg-gray-50 rounded-xl p-4 space-y-2">
               <div className="flex justify-between">
@@ -329,6 +343,13 @@ export function DonationFlow({ student, onSuccess, onCancel }: DonationFlowProps
                 {loading ? 'Processing...' : `Pay ${formatCurrency(amount, currency)}`}
               </button>
             </div>
+
+            <p className="text-xs text-gray-500 text-center">
+              By completing this donation, you acknowledge that your contribution is
+              made to The Education Foundation for its charitable purposes, that your
+              student selection is a non-binding preference, and that the Foundation
+              retains full discretion and control over the use of all donations.
+            </p>
           </div>
         )}
 
@@ -353,8 +374,9 @@ export function DonationFlow({ student, onSuccess, onCancel }: DonationFlowProps
               Thank you for your generosity!
             </h3>
             <p className="text-gray-600 mb-6">
-              Your donation of {formatCurrency(amount, currency)} will help{' '}
-              {student.firstName} achieve their dreams.
+              Your gift of {formatCurrency(amount, currency)} to The Education
+              Foundation will be applied toward {student.firstName}&apos;s education,
+              in line with your preference. A receipt has been emailed to you.
             </p>
             <button onClick={onCancel} className="btn-primary">
               Close
