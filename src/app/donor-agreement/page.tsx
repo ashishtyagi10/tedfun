@@ -361,18 +361,31 @@ export default function DonorAgreementPage() {
                       <h2 className="text-2xl font-bold text-gray-900">5. Tax Benefits</h2>
                     </div>
                     <div className="prose prose-gray max-w-none">
-                      <h3>5.1 For Indian Donors</h3>
+                      <h3>5.1 For Donors in India</h3>
                       <p>
-                        The Education Foundation is registered under Section 80G of the Income Tax Act, 1961.
-                        Donations made to us are eligible for tax deduction as per applicable laws.
+                        Deductions for charitable donations in India are governed by Section 80G of the
+                        Income Tax Act, 1961, and are available only for donations to organizations
+                        holding a valid 80G registration. The Foundation will publish its 80G
+                        registration details on this page once registration is granted. Until then,
+                        donations may not be eligible for deduction in India.
                       </p>
                       <ul>
-                        <li>50% tax deduction on donated amount</li>
-                        <li>80G certificate provided within 7 days of donation</li>
-                        <li>Annual consolidated tax receipt available on request</li>
+                        <li>Official donation receipts provided for every contribution</li>
+                        <li>80G certificates will be issued once registration is in effect</li>
+                        <li>Annual consolidated donation statement available on request</li>
                       </ul>
 
-                      <h3>5.2 For International Donors</h3>
+                      <h3>5.2 For Donors in the United States</h3>
+                      <p>
+                        The Foundation is pursuing recognition as a tax-exempt public charity under
+                        Section 501(c)(3) of the U.S. Internal Revenue Code. If the IRS approves an
+                        application filed within 27 months of the Foundation&apos;s formation, exemption is
+                        generally retroactive to the formation date, which can make donations made while
+                        the application is pending deductible. Until the IRS issues a determination
+                        letter, deductibility of your donation in the United States is not guaranteed.
+                      </p>
+
+                      <h3>5.3 For Other International Donors</h3>
                       <p>
                         Tax benefits for international donations vary by country. We recommend consulting
                         with your tax advisor regarding deductibility in your jurisdiction. We provide:
