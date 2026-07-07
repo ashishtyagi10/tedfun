@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 TedFun is a non-profit platform connecting underprivileged students with donors. Built with Next.js 16, Firebase, and Stripe.
 
-**Firebase Project**: `the-education-foundation`
+**Firebase Project**: `tedfun-2f3cb`
 
 ## Commands
 
