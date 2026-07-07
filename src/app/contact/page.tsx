@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     question: 'Are donations tax-deductible?',
-    answer: 'Yes! We are a registered non-profit under Section 80G. You will receive a tax receipt via email after your donation is processed.',
+    answer: 'We are pursuing charitable registrations in the US (Section 501(c)(3)) and India (Section 80G) and will announce tax-deductibility as soon as they are granted — US approval can apply retroactively to donations made while the application is pending. You will receive an official donation receipt via email after your donation is processed; please consult your tax advisor about deductibility in your jurisdiction.',
   },
   {
     question: 'How do I submit a student case?',

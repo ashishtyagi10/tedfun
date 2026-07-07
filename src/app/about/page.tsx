@@ -268,16 +268,17 @@ export default function AboutPage() {
               Recognized & Trusted
             </h2>
             <p className="text-gray-600 mb-8">
-              We're registered as a non-profit organization and all donations
-              are eligible for tax deductions under Section 80G of the Income
-              Tax Act.
+              We operate as a non-profit organization and are pursuing
+              charitable registrations in the US (Section 501(c)(3)) and India
+              (Section 80G). Tax-deductibility of donations will be announced
+              here once registrations are granted.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm">
-                Registered Non-Profit
+                Non-Profit Organization
               </div>
               <div className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm">
-                80G Certified
+                Registrations in Progress
               </div>
               <div className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm">
                 Transparent Operations

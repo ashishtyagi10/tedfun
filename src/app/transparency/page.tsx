@@ -641,13 +641,16 @@ export default function TransparencyPage() {
                         <li>Firebase - Database and authentication</li>
                       </ul>
 
-                      <h3>Accreditations & Memberships</h3>
+                      <h3>Registrations & Compliance</h3>
+                      <p>
+                        The Foundation is in the process of obtaining its charitable
+                        registrations. We will publish registration numbers and
+                        certificates here as each is granted. Current status:
+                      </p>
                       <ul>
-                        <li>Registered under Section 8 of Companies Act, 2013</li>
-                        <li>80G Tax Exemption Certificate</li>
-                        <li>12A Registration for charitable purposes</li>
-                        <li>FCRA Registration for foreign contributions</li>
-                        <li>Member of GuideStar India Transparency Initiative</li>
+                        <li>US federal tax exemption under Section 501(c)(3) — application in preparation</li>
+                        <li>Section 80G and 12A registrations (India) — planned</li>
+                        <li>FCRA registration for foreign contributions (India) — planned</li>
                       </ul>
                     </div>
                   </section>

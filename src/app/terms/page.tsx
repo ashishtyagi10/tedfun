@@ -325,7 +325,7 @@ export default function TermsOfServicePage() {
                         },
                         {
                           title: 'Tax Receipts',
-                          desc: 'Donations are eligible for tax deduction under Section 80G of the Income Tax Act (India). Tax receipts will be sent via email.',
+                          desc: 'Official donation receipts will be sent via email. Tax-deductibility depends on our pending charitable registrations (Section 501(c)(3) in the US; Section 80G in India) — see the Donor Agreement for current status.',
                         },
                         {
                           title: 'Fund Allocation',

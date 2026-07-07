@@ -99,7 +99,7 @@ export default function HowItWorksPage() {
     {
       title: 'Tax Benefits',
       description:
-        'All donations are eligible for tax deductions under Section 80G.',
+        'Official receipts for every donation. Tax-deductibility will be announced once our pending charitable registrations (501(c)(3) in the US, 80G in India) are granted.',
     },
     {
       title: 'Secure Payments',
