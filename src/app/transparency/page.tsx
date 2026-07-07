@@ -623,20 +623,18 @@ export default function TransparencyPage() {
                     <div className="prose prose-gray max-w-none">
                       <h3>External Auditors</h3>
                       <p>
-                        Our financial statements are audited annually by <strong>RSM Astute Consulting Pvt. Ltd.</strong>,
-                        a member of RSM International, one of the world's leading audit and advisory networks.
+                        We are committed to annual independent audits of our financial
+                        statements. We will name our audit firm and publish audit reports
+                        here once our first fiscal year is complete.
                       </p>
 
-                      <h3>Banking Partners</h3>
+                      <h3>Payment Processing</h3>
                       <ul>
-                        <li>HDFC Bank - Primary banking partner</li>
-                        <li>Stripe - International payment processing</li>
-                        <li>Razorpay - Domestic payment processing</li>
+                        <li>Stripe - Secure online payment processing (INR and USD)</li>
                       </ul>
 
                       <h3>Technology Partners</h3>
                       <ul>
-                        <li>Google for Nonprofits - Cloud infrastructure</li>
                         <li>Vercel - Website hosting</li>
                         <li>Firebase - Database and authentication</li>
                       </ul>
